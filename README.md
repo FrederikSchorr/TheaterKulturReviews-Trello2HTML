@@ -31,10 +31,23 @@ export TRELLO_BOARD_ID="..."
 Alternativ können diese drei Werte in einer lokalen `.env`-Datei stehen (wird per `.gitignore`
 nicht mit eingecheckt).
 
+### Empfohlen: GitHub Codespaces Secrets
+
+Dieses Repo enthält einen `.devcontainer`, damit es direkt in einem GitHub Codespace (inkl.
+Jupyter-Unterstützung in VS Code) läuft. Secrets dafür einmalig hinterlegen:
+
+1. Im Repo auf GitHub: **Settings → Secrets and variables → Codespaces**
+2. **New repository secret** für jeden der drei Werte anlegen:
+   `TRELLO_API_KEY`, `TRELLO_TOKEN`, `TRELLO_BOARD_ID`
+3. Codespace starten (**Code → Codespaces → Create codespace on main**)
+
+Die Secrets werden dort automatisch als Umgebungsvariablen bereitgestellt — der Code im Notebook
+(`os.environ.get(...)`) findet sie ohne weitere Anpassung.
+
 ## Verwendung
 
-Notebook öffnen (lokal mit Jupyter oder in Google Colab) und der Reihe nach ausführen. Am Ende
-entstehen:
+Notebook öffnen (im Codespace, lokal mit Jupyter, oder in Google Colab) und der Reihe nach
+ausführen. Am Ende entstehen:
 
 - eine HTML-Datei mit allen Reviews (Bilder eingebettet als Base64, direkt teilbar/druckbar)
 - optional eine CSV-Datei, wenn `YEAR = ""` (alle Jahre) gesetzt ist
