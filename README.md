@@ -18,9 +18,8 @@ pip install -r requirements.txt
 
 ## Zugangsdaten
 
-**Wichtig: Trello API Key und Token gehören niemals in den Code oder ins Repo**, auch nicht in
-ein privates. Das Notebook liest sie stattdessen aus Umgebungsvariablen — sind sie nicht gesetzt,
-fragt es beim Ausführen interaktiv danach:
+Das Notebook liest `API_KEY`, `TOKEN` und `BOARD_ID` aus Umgebungsvariablen — sind sie nicht
+gesetzt, fragt es beim Ausführen interaktiv danach:
 
 ```bash
 export API_KEY="..."
@@ -28,8 +27,7 @@ export TOKEN="..."
 export BOARD_ID="..."
 ```
 
-Alternativ können diese drei Werte in einer lokalen `.env`-Datei stehen (wird per `.gitignore`
-nicht mit eingecheckt).
+Alternativ in einer lokalen `.env`-Datei (siehe `.gitignore`).
 
 ### Empfohlen: GitHub Codespaces Secrets
 
