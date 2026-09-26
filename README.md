@@ -23,9 +23,9 @@ ein privates. Das Notebook liest sie stattdessen aus Umgebungsvariablen — sind
 fragt es beim Ausführen interaktiv danach:
 
 ```bash
-export TRELLO_API_KEY="..."
-export TRELLO_TOKEN="..."
-export TRELLO_BOARD_ID="..."
+export API_KEY="..."
+export TOKEN="..."
+export BOARD_ID="..."
 ```
 
 Alternativ können diese drei Werte in einer lokalen `.env`-Datei stehen (wird per `.gitignore`
@@ -38,7 +38,7 @@ Jupyter-Unterstützung in VS Code) läuft. Secrets dafür einmalig hinterlegen:
 
 1. Im Repo auf GitHub: **Settings → Secrets and variables → Codespaces**
 2. **New repository secret** für jeden der drei Werte anlegen:
-   `TRELLO_API_KEY`, `TRELLO_TOKEN`, `TRELLO_BOARD_ID`
+   `API_KEY`, `TOKEN`, `BOARD_ID`
 3. Codespace starten (**Code → Codespaces → Create codespace on main**)
 
 Die Secrets werden dort automatisch als Umgebungsvariablen bereitgestellt — der Code im Notebook
