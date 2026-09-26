@@ -1,4 +1,4 @@
-# TheaterKulturReviews-Trello2HTML
+# theatre-culture-reviews-trello2html
 
 Meine Theater & Kultur Reviews aus Trello in schönes HTML (und optional CSV) exportieren.
 
